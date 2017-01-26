@@ -3,25 +3,25 @@ package testing;
 import java.sql.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.util.Calendar;
 
 public class DateFormat {
 
-	public static void main(String[] args) throws ParseException {
+	public static void main(String[] args) {
 	
-		Calendar calendar =Calendar.getInstance();
-		Date date2 = new Date(calendar.getTimeInMillis());
-		System.out.println(date2);
-		
 		SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-		String str = dateFormat.format(new java.util.Date());
-		System.out.println(str);
-		java.util.Date dates = dateFormat.parse(str);
-		System.out.println(dates);
-		Date date = new Date(dates.getTime());
+		
+		java.util.Date d = new java.util.Date();
+		String ds = dateFormat.format(d);
+		
+		Date date = null;
+		try {
+			date = new Date(dateFormat.parse(ds).getTime());
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		System.out.println(date);
-			
 		
 	}
 
