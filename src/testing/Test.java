@@ -15,6 +15,7 @@ public class Test {
 	
 	public static void main(String[] args) throws ParseException {
 		System.out.println("Test");
+		
 		Date date = new Date(new java.util.Date().getTime());
 		
 		CouponSystem couponSystem = CouponSystem.getInstance();
