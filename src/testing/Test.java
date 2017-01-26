@@ -17,6 +17,7 @@ public class Test {
 		
 		Date date = new Date(new java.util.Date().getTime());
 		
+		
 		CouponSystem couponSystem = CouponSystem.getInstance();
 		
 		CompanyFacade companyFacade = (CompanyFacade) couponSystem.login("tootkale", "1111", "Company");
